@@ -24,26 +24,22 @@
 <div class="d-flex justify-content-center w-100">
 <div class="w-75">
 <!--    <div class="starter-template">-->
-        <h3>게시판 리스트</h3>
-        <div>Total : <span th:text="${#lists.size(boards)}"></span></div>
-        <table class="table">
-            <thead class="thead-light">
-            <tr>
-                <th scope="col">번호</th>
-                <th scope="col">제목</th>
-                <th scope="col">작성자</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="board: ${boards}">
-                <th th:text="${board.id}">1</th>
-                <td th:text="${board.title}">Mark</td>
-                <td>김말똥</td>
-            </tr>
-            </tbody>
-        </table>
+        <h3>게시판 글쓰기</h3>
+
+    <form>
+        <div class="form-group">
+            <label for="title">제목</label>
+            <input type="email" class="form-control" id="title" placeholder="제목을 입력하세요">
+        </div>
+
+        <div class="form-group">
+            <label for="content">내용</label>
+            <textarea class="form-control" id="content" rows="3"></textarea>
+        </div>
+    </form>
     <div class="text-right">
-    <a type="button" class="btn btn-primary" th:href="@{/board/writeForm}">글쓰기</a>
+    <button type="submit" class="btn btn-primary">확인</button>
+    <button type="button" class="btn btn-info">취소</button>
     </div>
 <!--</main>&lt;!&ndash; /.container &ndash;&gt;-->
 </div>
