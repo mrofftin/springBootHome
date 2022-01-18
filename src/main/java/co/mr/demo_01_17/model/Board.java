@@ -14,7 +14,7 @@ import javax.persistence.Id;
 public class Board {
     @Id // pk라는 것을 알려주기 위해
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    // SEQUENCE가 성능이 가장 좋다고 함. IDENTITY가 가장 많이 사용, TABLE 성능이 제일 안좋음음
+    // SEQUENCE가 성능이 가장 좋다고 함. IDENTITY가 가장 많이 사용, TABLE 성능이 제일 안좋음
     private long id;
     private String title;
     private String contents;
